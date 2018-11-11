@@ -34,7 +34,7 @@ ks.log("Auth Token : " + str(ks.authToken))
 ks.log("Timeline Token : " + str(ks.tl.channelAccessToken))
 
 helpMessage ="""╔═══════════════╗
-         ✰ɢʜᴏsᴛ ᴛᴇᴀᴍ✰
+         MAI
 ╚═══════════════╝
 ═════════════════
  ◄]·♦·Menu For Public·♦·[►
@@ -61,7 +61,7 @@ helpMessage ="""╔═══════════════╗
 ╠ Banlist
 ╚════════════════
 ╔═══════════════╗
-         ✰ɢʜᴏsᴛ ᴛᴇᴀᴍ✰
+         MAI
 ╚═══════════════╝"""
 
 oepoll = OEPoll(cl)
@@ -84,7 +84,7 @@ wait = {
     'timeline':True,
     'autoAdd':True,
     'message':"""╔════════════╗
-     ✰ɢʜᴏsᴛ ᴛᴇᴀᴍ✰
+     MAI
 ╚════════════╝
 ══════════════
  ◄]·♦·Open Sewa·♦·[►
@@ -94,7 +94,7 @@ wait = {
 ╠ Bot Protect
 ╚═════════════
 Minat?
-http://line.me/ti/p/~iiipuuul""",
+http://line.me/ti/p/~mai06555mai""",
     "lang":"JP",
     "comment":"Thanks for add me",
     "commentOn":False,
@@ -102,11 +102,11 @@ http://line.me/ti/p/~iiipuuul""",
     "wblack":False,
     "dblack":False,
     "clock":False,
-    "cName":"✰ɢʜᴏsᴛ ᴛᴇᴀᴍ✰",
-    "cName2":"✰ɢʜᴏsᴛ ᴛᴇᴀᴍ✰ ",
-    "cName3":"✰ɢʜᴏsᴛ ᴛᴇᴀᴍ✰ ",
-    "cName4":"✰ɢʜᴏsᴛ ᴛᴇᴀᴍ✰ ",
-    "cName5":"✰ɢʜᴏsᴛ ᴛᴇᴀᴍ✰ ",
+    "cName":"✰mai✰",
+    "cName2":"✰mai1✰ ",
+    "cName3":"✰mai2✰ ",
+    "cName4":"✰mai3✰ ",
+    "cName5":"✰mai4✰ ",
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
@@ -491,12 +491,12 @@ def bot(op):
                 else:
                     cl.sendText(msg.to,"It can't be used besides the group.")
 
-            elif "Kick " in msg.text:
+            elif "เตะ " in msg.text:
               if msg._from in admin:
                 midd = msg.text.replace("Kick ","")
                 random.choice(KAC).kickoutFromGroup(msg.to,[midd])
 
-            elif "Invite " in msg.text:
+            elif "ดึง " in msg.text:
               if msg._from in admin:
                 midd = msg.text.replace("Invite ","")
                 cl.findAndAddContactsByMid(midd)
@@ -506,7 +506,7 @@ def bot(op):
 #======================================================================================================#
 #======================================================================================================#
 
-            elif "Admin add @" in msg.text:
+            elif "เพิ่มแอด @" in msg.text:
               if msg._from in owner:
                 _name = msg.text.replace("Admin add @","")
                 _nametarget = _name.rstrip('  ')
@@ -532,7 +532,7 @@ def bot(op):
                 cl.sendText(msg.to,"Perintah Ditolak.")
                 cl.sendText(msg.to,"Hanya Owner Yang bisa Gunain Perintah ini.")
                 
-            elif "Admin remove @" in msg.text:
+            elif "ลบแอด @" in msg.text:
               if msg._from in owner:
                 _name = msg.text.replace("Admin remove @","")
                 _nametarget = _name.rstrip('  ')
@@ -572,7 +572,7 @@ def bot(op):
 #======================================================================================================#
 #======================================================================================================#
 
-            elif "Bot Add @" in msg.text:
+            elif "Bot @" in msg.text:
               if msg.toType == 2:
                 if msg._from in owner:
                   _name = msg.text.replace("Bot Add @","")
@@ -662,7 +662,7 @@ def bot(op):
                 msg.contentMetadata = {'mid': msg._from}
                 random.choice(KAC).sendMessage(msg)
 
-            elif msg.text in ["Cancel","cancel"]:
+            elif msg.text in ["ยกเชิญ","cancel"]:
               if msg._from in admin:
                 if msg.toType == 2:
                     X = cl.getGroup(msg.to)
@@ -949,7 +949,7 @@ def bot(op):
                         cl.sendText(msg.to,"done")
                     else:
                         cl.sendText(msg.to,"è¦�äº†å…³æ–­ã€‚")
-            elif msg.text in ["Status","Set"]:
+            elif msg.text in ["เชค","Set"]:
               if msg._from in admin:
                 md = "⭐Status Proteksi⭐\n*============*\n"
                 if wait["Protectgr"] == True: md+="[•]Protect QR [On]\n"
@@ -1630,7 +1630,7 @@ def bot(op):
 #======================================================================================================#
 #======================================================================================================#
 
-            elif msg.text in ["Bot out","Op bye"]: # Keluar Dari Semua Group Yang Di dalem nya  ada bot(Kalo Bot Kalian Nyangkut di Group lain :D)
+            elif msg.text in ["บอทออก","Op bye"]: # Keluar Dari Semua Group Yang Di dalem nya  ada bot(Kalo Bot Kalian Nyangkut di Group lain :D)
               if msg._from in owner:
                 gid = cl.getGroupIdsJoined()
                 gid = ki.getGroupIdsJoined()
